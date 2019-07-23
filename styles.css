@@ -1,0 +1,191 @@
+/*!CSS Variables */
+
+:root {
+    --button: #0080f8;
+    --primary: #ddd;
+    --shadow: 0 0.3rem 0.3rem rgba(104, 104, 104, 0.8);
+}
+
+html {
+    /*background-image: linear-gradient(to bottom, #0080f8, #0080f8, #0080f8,
+            #0080f8, #0080f8, #1976ec, #256ce1, #2c62d5,
+            #354cba, #3837a0, #372185, #33076b);*/
+    background-color: var(--primary);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    margin: 5rem auto;
+
+    width: 95%;
+    line-height: 1.4;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.btn {
+    border: none;
+    background: white;
+}
+
+/* ! Header */
+.header {
+    display: grid;
+    grid-gap: 1.25rem;
+    background: white;
+    grid-template-columns: 3fr, 1fr;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: solid var(--button) 0.1rem;
+}
+
+.main-nav a,
+.btn {
+    text-decoration: none;
+    color: var(--button);
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: block;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.main-nav a:hover,
+.btn:hover {
+    color: white;
+    background: var(--button);
+}
+
+.main-nav ul {
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    list-style-type: none;
+    align-content: center;
+    justify-items: center;
+}
+
+/* ! showcase */
+.showcase {
+    display: flex;
+    background-color: white;
+    color: white;
+    padding: 0;
+    padding-left: 5rem;
+    height: 95vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("img/camera-macro-optics-122400.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.showcase p {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.showcase .btn {
+    font-size: 1.15rem;
+    width: 10rem;
+}
+
+/* !Products */
+.products {
+    display: grid;
+    padding: 2rem;
+    grid-gap: 1rem 5rem;
+    grid-template-areas:
+        ". . header . ."
+        ". top-box-a top-box-b top-box-c .";
+}
+
+.products h2 {
+    grid-area: header;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+.top-box {
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.top-box button {
+    width: 10rem;
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+}
+
+.top-box-b {
+    grid-area: top-box-b;
+}
+
+.top-box-c {
+    grid-area: top-box-c;
+}
+
+/* ! Subscribe */
+.subscribe {
+    display: flex;
+    height: 50vh;
+}
+
+.subscribe video {
+    flex-basis: 70%;
+}
+
+.form {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form input {
+    width: 70%;
+    height: 2rem;
+    border: solid var(--button) 0.1rem;
+}
+
+.form input:active {
+    transform: scale(2)
+}
+
+.form button {
+    width: 10rem;
+}
+
+
+/* !Footer */
+
+footer {
+    display: grid;
+    background: var(--button);
+    text-align: center;
+    font-size: 1.3rem;
+    height: 30vh;
+    color: white;
+    margin-top: 2rem;
+}
